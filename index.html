@@ -1,11 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Gym</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gimnasio Jybor</title>
+  <link rel="stylesheet" href="/css/my_style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-    <h1>Creando mi page</h1>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <nav class="mega-menu">
+      <div class="logo">🏋️ GYM-JYBOR</div>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="entrenadores.html">Entrenadores</a></li>
+        <li><a href="precio.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <!-- <li class="dropdown">
+          <a href="clases.html">Clases</a>
+          <div class="submenu">
+            <a href="#">Musculación</a>
+            <a href="#">CrossFit</a>
+            <a href="#">Spinning</a>
+            <a href="#">Yoga</a>
+          </div> -->
+        <!-- </li>
+        <li class="dropdown">
+          <a href="entrenadores.html">Entrenadores</a>
+          <div class="submenu">
+            <a href="#">Personal Trainers</a>
+            <a href="#">Nutricionistas</a>
+          </div>
+        </li>
+      
+        <li class="dropdown">
+          <a href="precio.html">Precios</a>
+          <div class="submenu">
+            <a href="#">Planes Mensuales</a>
+            <a href="#">Promociones</a>
+          </div>
+        </li>
+      
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li> -->
+      </ul>  
+  </header>
+    <!-- Sección Hero -->  
+    <section class="hero">
+              <video class="hero-video" autoplay muted loop>
+                  <source src="/videos/videogym.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de videos.
+              </video>
+              <div class="hero-overlay"></div>
+            <div class="hero-content">
+            <h1 class="hero-title">Bienvenido a nuestro gimnasio</h1>
+        <p class="hero-subtitle">¡ Transforma tu cuerpo y mente con nosotros !</p>
+        <button class="hero-button">Únete ahora</button>
+        </div>
+    </section>
+
+    <!-- Sección de Clases Destacadas -->
+
+    <section class="clases-destacadas">
+        <h2 class="section-title">Clases Destacadas</h2>
+         <div class="clases-container">
+          <div class="card">
+            <img src="img/gym_yoga.jpg" alt="Clase de Yoga">
+            <h3>Clase de Yoga</h3>
+            <p>Relaja tu cuerpo y mente con nuestras sesiones de yoga.</p>
+            <a href="#" class="clase-btn">Ver más</a>
+          </div>
+          <div class="card">
+            <img src="img/gym_hii.jpg" alt="Clase de HII">
+            <h3>Clase Hiit</h3>
+            <p>Entrena al máximo nivel con nuestros entrenadores expertos, efectivos para trabajar en grupo.</p>
+            <a href="#" class="clase-btn">Ver más</a>
+          </div>
+          <div class="card">
+            <img src="img/gym_zumba.jpg" alt="Clase de Zumba">
+            <h3>Clase de Zumba</h3>
+            <p>Disfruta de una experiencia divertida con nuestra música motivadora.</p>
+            <a href="#" class="clase-btn">Ver más</a>
+          </div>
+        <div class="card">
+            <img src="img/gym_bodypump.jpg" alt="Clase de Body Pump">
+            <h3>Clase de Body Pump</h3>
+            <p>Mejora tu resistencia y fuerza a ritmo de la musica.</p>
+            <a href="#" class="clase-btn">Ver más</a>
+         </div>
+    </section>
+
+<!-- Sección de Contador -->
+<section class="contador">
+  <div class="contador-item">
+    <div class="numero" data-target="500">500+</div>
+    <p>Socios Satisfechos</p>
+  </div>
+  <div class="contador-item">
+    <div class="numero" data-target="25">25+</div>
+    <p>Clases Semanales</p>
+  </div>
+  <div class="contador-item">
+    <div class="numero" data-target="10">10+</div>
+    <p>Entrenadores Expertos</p>
+  </div>
+</section>
+
+<!-- Sección de Testimonios -->
+<section class="testimonios">
+  <h2 class="section-title">LO QUE OPINAN NUESTROS SOCIOS</h2>
+  <div class="carousel-auto">
+    <div class="slides-auto">
+      <div class="slide-auto">
+        <p>"Entrenar acá me cambió la vida. Los entrenadores son de otro nivel."</p>
+        <h4>- Carla P.</h4>
+      </div>
+      <div class="slide-auto">
+        <p>"El ambiente, las rutinas, todo es excelente. ¡Súper recomendado!"</p>
+        <h4>- Matías D.</h4>
+      </div>
+      <div class="slide-auto">
+        <p>"¡Me siento más fuerte y saludable que nunca! Gracias GYB-GYBOR."</p>
+        <h4>- Lucho M.</h4>
+      </div>
+      <div class="slide-auto">
+        <p>"Las clases son muy dinámicas y divertidas. ¡Me encanta!"</p>
+        <h4>- Ana G.</h4>
+    </div>
+    <div class="slide-auto">
+        <p>"El equipo de entrenadores es increíble. Siempre motivándome."</p>
+        <h4>- Juan R.</h4>
+      </div>
+      <div class="slide-auto">
+        <p>"La variedad de clases me mantiene motivada. ¡No puedo dejar de venir!"</p>
+        <h4>- Laura S.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pie de Página -->
+<footer class="footer">
+  <!-- FORMULARIO DE SUSCRIPCIÓN -->
+<section class="newsletter">
+  <h2>Suscribite a nuestro newsletter</h2>
+  <p>Recibí novedades, promociones y tips de entrenamiento directo en tu correo.</p>
+
+  <form class="newsletter-form">
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <button type="submit">Suscribirme</button>
+  </form>
+</section>
+        <!-- REDES SOCIALES -->
+<div class="social-media">
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+<!-- MAPA INTERACTIVO -->
+<div class="mapa">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1894199999!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c3c20f1c9%3A0x90e0156d0327b2c4!2sGimnasio%20Ejemplo!5e0!3m2!1ses-419!2sar!4v1712849540000!5m2!1ses-419!2sar"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+<p class="footer-creditos">&copy; 2025 Mi Sitio Gym. Todos los derechos reservados.</p>  
+  </footer>
+              
 </body>
 </html>
