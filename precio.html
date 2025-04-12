@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planes y Precios</title>
+  <link rel="stylesheet" href="/css/my_style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    
+  <header>
+    <nav class="mega-menu">
+      <div class="logo">🏋️ GYM-JYBOR</div>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="entrenadores.html">Entrenadores</a></li>
+        <li><a href="precio.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>  
+    </nav>
+  </header>
+
+  <section class="precios">
+    <h2>Comparador de Planes</h2>
+  
+    <!-- Toggle mensual/anual -->
+    <div class="toggle-plan">
+      <input type="radio" name="plan" id="mensual" checked>
+      <label for="mensual">Mensual</label>
+      <input type="radio" name="plan" id="anual">
+      <label for="anual">Anual</label>
+    </div>
+  
+    <!-- Tabla de precios -->
+    <div class="tabla-planes">
+      <div class="plan basico">
+        <h3>Básico</h3>
+        <p class="precio mensual">AR$ 5.000</p>
+        <p class="precio anual">AR$ 50.000</p>
+        <ul>
+          <li><span class="tooltip" data-tooltip="Incluye acceso a sala de musculación">Acceso limitado</span></li>
+          <li><span class="tooltip" data-tooltip="Solo en horario de mañana">Horario reducido</span></li>
+          <li><span class="tooltip" data-tooltip="No incluye clases grupales">Sin clases</span></li>
+        </ul>
+      </div>
+  
+      <div class="plan intermedio destacado">
+        <h3>Intermedio</h3>
+        <p class="precio mensual">AR$ 8.000</p>
+        <p class="precio anual">AR$ 80.000</p>
+        <ul>
+          <li><span class="tooltip" data-tooltip="Acceso completo al gimnasio">Acceso total</span></li>
+          <li><span class="tooltip" data-tooltip="Clases ilimitadas">Clases grupales</span></li>
+          <li><span class="tooltip" data-tooltip="1 evaluación mensual">Seguimiento</span></li>
+        </ul>
+      </div>
+  
+      <div class="plan premium">
+        <h3>Premium</h3>
+        <p class="precio mensual">AR$ 12.000</p>
+        <p class="precio anual">AR$ 110.000</p>
+        <ul>
+          <li><span class="tooltip" data-tooltip="Acceso completo y preferencial">Acceso VIP</span></li>
+          <li><span class="tooltip" data-tooltip="Clases + entrenamientos personalizados">Personal trainer</span></li>
+          <li><span class="tooltip" data-tooltip="Incluye nutricionista mensual">Nutrición</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+     <!-- Pie de Página -->
+<footer class="footer">
+  <!-- FORMULARIO DE SUSCRIPCIÓN -->
+<section class="newsletter">
+  <h2>Suscribite a nuestro canal</h2>
+  <p>Recibí novedades, promociones y tips de entrenamiento directo en tu correo.</p>
+
+  <form class="newsletter-form">
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <button type="submit">Suscribirme</button>
+  </form>
+</section>
+        <!-- REDES SOCIALES -->
+<div class="social-media">
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+<!-- MAPA INTERACTIVO -->
+<div class="mapa">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1894199999!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c3c20f1c9%3A0x90e0156d0327b2c4!2sGimnasio%20Ejemplo!5e0!3m2!1ses-419!2sar!4v1712849540000!5m2!1ses-419!2sar"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+<p class="footer-creditos">&copy; 2025 Mi Sitio Gym. Todos los derechos reservados.</p>  
+  </footer> 
 </body>
 </html>

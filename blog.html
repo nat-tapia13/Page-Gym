@@ -1,11 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/my_style.css"/>
+  <title>Blog-Fitnnis</title>
 </head>
 <body>
-    
+<!-- ENCABEZADO -->
+<header>
+    <nav class="mega-menu">
+      <div class="logo">🏋️ GYM-JYBOR</div>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="entrenadores.html">Entrenadores</a></li>
+        <li><a href="precio.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>  
+</header>
+<main class="blog-container">
+
+    <!-- FILTROS -->
+    <section class="blog-filtros">
+      <input type="radio" id="all" name="categoria" checked>
+      <label for="all">Todos</label>
+      <input type="radio" id="nutricion" name="categoria">
+      <label for="nutricion">Nutrición</label>
+      <input type="radio" id="entrenamiento" name="categoria">
+      <label for="entrenamiento">Entrenamiento</label>
+      <input type="radio" id="bienestar" name="categoria">
+      <label for="bienestar">Bienestar</label>
+    </section>
+  
+    <!-- ARTÍCULOS -->
+    <section class="blog-grid">
+      <article class="post entrenamiento">
+        <h2>Rutina Full Body para Principiantes</h2>
+        <p>Ideal para quienes recién empiezan en el gimnasio.</p>
+      </article>
+  
+      <article class="post nutricion">
+        <h2>5 Snacks Saludables Pre-Entreno</h2>
+        <p>Recetas rápidas y llenas de energía.</p>
+      </article>
+  
+      <article class="post bienestar">
+        <h2>Beneficios del Yoga para la mente</h2>
+        <p>Mejora tu enfoque y reduce el estrés.</p>s
+      </article>
+  
+      <article class="post entrenamiento">
+        <h2>Entrena en casa con tu propio peso</h2>
+        <p>Rutinas efectivas sin equipo.</p>
+      </article>
+    </section>
+  
+    <!-- COMENTARIOS -->
+    <section class="comentarios">
+      <h3>Comentarios</h3>
+  
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>AnaFit:</strong> ¡Excelente artículo! Ya estoy aplicando la rutina.
+        </div>
+      </div>
+  
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>StrongMan:</strong> Muy buena info, gracias por compartir 💪
+        </div>
+      </div>
+  
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>NutriTips:</strong> ¡Me encantó la receta de snacks! Perfecta para antes de entrenar.
+        </div>
+      </div>
+  
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>FitMom:</strong> El yoga es genial para la mente y el cuerpo. ¡Gracias por el artículo!
+        </div>
+      </div>
+  
+      <div class="comentario">
+      <div class="avatar"></div>
+        <div class="contenido">
+          <strong>GymLover:</strong> Me gustaría ver más rutinas para casa. ¡Saludos!
+        </div>
+      </div>
+  
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>HealthyLife:</strong> ¡Gran contenido! Me encanta cómo explican todo. 
+      </div>
+      </div>
+  
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>FitFam:</strong> ¡Gracias por compartir! Siempre aprendo algo nuevo aquí.
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+      
+        <!-- FORMULARIO DE SUSCRIPCIÓN -->
+<section class="newsletter">
+    <h2>Suscribite a nuestro canal</h2>
+    <p>Recibí novedades, promociones y tips de entrenamiento directo en tu correo.</p>
+  
+    <form class="newsletter-form">
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+          <!-- REDES SOCIALES -->
+  <div class="social-media">
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+  <!-- MAPA INTERACTIVO -->
+  <div class="mapa">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1894199999!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c3c20f1c9%3A0x90e0156d0327b2c4!2sGimnasio%20Ejemplo!5e0!3m2!1ses-419!2sar!4v1712849540000!5m2!1ses-419!2sar"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <p class="footer-creditos">&copy; 2025 Mi Sitio Gym. Todos los derechos reservados.</p>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>    
+</footer>
 </body>
 </html>

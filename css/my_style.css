@@ -311,34 +311,38 @@ header {
 }
 
 /* FILTROS */
+/* Filtro por categorías (solo CSS) */
 .filtros {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0;
+  gap: 1em;
+  margin: 2em 0;
+  flex-wrap: wrap;
 }
-
-.filtros label {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border: 2px solid #f04e30;
-  border-radius: 20px;
-  background-color: #fff;
-  color: #f04e30;
-  transition: 0.3s ease;
-}
-
 .filtros input[type="radio"] {
   display: none;
 }
-
-.filtros input[type="radio"]:checked + span {
-  background-color: #f04e30;
-  color: #fff;
+.filtros label {
+  background: #ddd;
+  padding: 0.5em 1em;
   border-radius: 20px;
-  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
+.filtros input[type="radio"]:checked + label {
+  background: #bbb;
+}
+.filtro-card {
+  display: none;
+}
+#musculacion:checked ~ .contenedor-clases .musculacion,
+#crossfit:checked ~ .contenedor-clases .crossfit,
+#yoga:checked ~ .contenedor-clases .yoga,
+#spinning:checked ~ .contenedor-clases .spinning,
+#todos:checked ~ .contenedor-clases .filtro-card {
+  display: block;
+}
+
 /* Galería tipo Masonry */
 .galeria-masonry {
   display: grid;
@@ -387,22 +391,7 @@ header {
 .card:hover .overlay {
   opacity: 1;
 }
-/* Filtrado por categoria */
-.card{
-  display: none; /* Ocultar todas las tarjetas por defecto */
- }
-
-  input[value="all"]:checked ~ .galeria-clases .card {
-    display: block; /* Mostrar todas las tarjetas */
-  }
-  
-  input[value="musculacion"]:checked ~ .galeria-masonry .card img[alt="Musculación"],
-  input[value="crossfit"]:checked ~ .galeria-masonry .card img[alt="CrossFit"],
-  input[value="yoga"]:checked ~ .galeria-masonry .card img[alt="Yoga"],
-  input[value="spinning"]:checked ~ .galeria-masonry .card img[alt="Spinning"] {
-  display: block;
-}
-
+/* Efecto de overlay */
 .image-container:hover .overlay {
   opacity: 1; /* Aparece el overlay al pasar el cursor */
 }
@@ -666,6 +655,307 @@ td:first-child {
   box-shadow: 0 4px 12px #00000033;
 }
 
+/* Estilo Sección de precios */
+/* Precios */
+.precios {
+  padding: 2em;
+  text-align: center;
+}
+.toggle-plan {
+  margin-bottom: 2em;
+}
+.toggle-plan input[type="radio"] {
+  display: none;
+}
+.toggle-plan label {
+  background: #ccc;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.toggle-plan input:checked + label {
+  background: #999;
+}
+/* Tabla de planes */
+.tabla-planes {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.plan {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.plan:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.plan h3 {
+  margin-bottom: 0.5em;
+}
+.plan .precio {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+.plan .precio.anual {
+  display: none;
+}
+
+/* Mostrar/Ocultar precios según toggle */
+#mensual:checked ~ .tabla-planes .precio.mensual {
+  display: block;
+}
+#mensual:checked ~ .tabla-planes .precio.anual {
+  display: none;
+}
+#anual:checked ~ .tabla-planes .precio.anual {
+  display: block;
+}
+#anual:checked ~ .tabla-planes .precio.mensual {
+  display: none;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dashed #333;
+}
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 0.5em;
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+}
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* Plan destacado */
+.destacado {
+  border: 2px solid crimson;
+}
+                /* Estilo para la sección de contacto */
+  /* Sección de contacto */
+.contacto {
+  padding: 2em;
+  background: #f9f9f9;
+  text-align: center;
+}
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  max-width: 600px;
+  margin: auto;
+}
+.formulario input,
+.formulario textarea {
+  padding: 1em;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 100%;
+  outline: none;
+}
+.formulario input:valid,
+.formulario textarea:valid {
+  border-color: green;
+}
+.formulario input:invalid,
+.formulario textarea:invalid {
+  border-color: red;
+}
+.formulario button {
+  padding: 0.8em;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.formulario button:hover {
+  background: darkred;
+}
+
+/* Spinner */
+.spinner {
+  display: none;
+  margin: 1em auto;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #ccc;
+  border-top: 4px solid crimson;
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
+}
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-contenido {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal-contenido button {
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.modal-contenido button:hover {
+  background: #111;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .formulario {
+    padding: 1em;
+  }
+}
+
+/* Estilo para la sección de blog */
+/* BLOG - Diseño tipo revista */
+
+.blog-container {
+  padding: 2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-filtros {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.blog-filtros input[type="radio"] {
+  display: none;
+}
+.blog-filtros label {
+  background: #ddd;
+  padding: 0.5em 1em;
+  margin: 0.2em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.blog-filtros input:checked + label {
+  background: crimson;
+  color: white;
+}
+
+/* Grid tipo periódico */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+}
+.post {
+  background: white;
+  padding: 1.5em;
+  border-left: 5px solid crimson;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: reveal 1s ease-out forwards;
+}
+.post:nth-child(2) { animation-delay: 0.2s; }
+.post:nth-child(3) { animation-delay: 0.4s; }
+.post:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Filtro por categoría con CSS */
+
+#nutricion:checked ~ .blog-grid .post:not(.nutricion),
+#entrenamiento:checked ~ .blog-grid .post:not(.entrenamiento),
+#bienestar:checked ~ .blog-grid .post:not(.bienestar) {
+  display: none;
+}
+
+/* Comentarios */
+.comentarios {
+  margin-top: 3em;
+  background: #f9f9f9;
+  padding: 2em;
+  border-radius: 10px;
+}
+.comentario {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: crimson;
+  border-radius: 50%;
+  margin-right: 1em;
+  position: relative;
+}
+.avatar::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+.contenido {
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /*Estilo para el pie de página*/
 
 .footer {

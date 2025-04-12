@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/my_style.css"/>
+  <title>Contacto</title>
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header>
+    <nav class="mega-menu">
+      <div class="logo">🏋️ GYM-JYBOR</div>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="entrenadores.html">Entrenadores</a></li>
+        <li><a href="precio.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>  
+</header>    
+
+<section class="contacto">
+  <h2>Contáctanos</h2>
+  
+  <form id="form-contacto" class="formulario">
+    <input type="text" name="nombre" placeholder="Nombre completo" required />
+    <input type="email" name="correo" placeholder="Correo electrónico" required />
+    <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <button type="submit">Enviar</button>
+
+    <div class="spinner" id="spinner"></div>
+  </form>
+</section>
+
+<!-- Modal de confirmación -->
+<div class="modal" id="modal-confirmacion">
+  <div class="modal-contenido">
+    <h3>¡Gracias por contactarnos!</h3>
+    <p>Tu mensaje ha sido enviado correctamente.</p>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('form-contacto');
+  const spinner = document.getElementById('spinner');
+  const modal = document.getElementById('modal-confirmacion');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    spinner.style.display = 'block';
+    setTimeout(() => {
+      spinner.style.display = 'none';
+      modal.style.display = 'flex';
+      form.reset();
+    }, 2000);
+  });
+
+  function cerrarModal() {
+    modal.style.display = 'none';
+  }
+</script>
+
+<!-- Pie de Página -->
+<footer class="footer">
+  <!-- FORMULARIO DE SUSCRIPCIÓN -->
+<section class="newsletter">
+  <h2>Suscribite a nuestro canal</h2>
+  <p>Recibí novedades, promociones y tips de entrenamiento directo en tu correo.</p>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <button type="submit">Suscribirme</button>
+  </form>
+</section>
+
+        <!-- REDES SOCIALES -->
+<div class="social-media">
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+<!-- MAPA INTERACTIVO -->
+<div class="mapa">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1894199999!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c3c20f1c9%3A0x90e0156d0327b2c4!2sGimnasio%20Ejemplo!5e0!3m2!1ses-419!2sar!4v1712849540000!5m2!1ses-419!2sar"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+<p class="footer-creditos">&copy; 2025 Mi Sitio Gym. Todos los derechos reservados.</p>  
+
+</footer>
+
+</body>
+</html>
