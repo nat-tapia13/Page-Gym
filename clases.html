@@ -11,10 +11,10 @@
     <header>
         <nav class="mega-menu">
         <div class="logo">🏋️ GYM-JYBOR</div>
-        <h2>Nuestras Clases</h2>
         <ul class="menu">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="clases.html">Clases</a></li>
+          <li class="dropdown"><a href="clases.html">Clases</a>
+          </li>
           <li><a href="entrenadores.html">Entrenadores</a></li>
           <li><a href="precio.html">Precios</a></li>
           <li><a href="contacto.html">Contacto</a></li>
@@ -24,6 +24,7 @@
       </header>
       
       <section class="filtro-clases">
+         <h2>Nuestras Clases</h2>
         <div class="filtros">
           <label>
             <input type="radio" name="categoria" value="all" checked>
@@ -51,7 +52,7 @@
       <section class="galeria-masonry">
         <div class="card musculacion">
           <div class="image-container">
-            <img src="img/gym_yoga.jpg" alt="Musculación">
+            <img src="img/gym_musculacion.jpg" alt="Musculación">
             <div class="overlay">
               <h3>Musculación</h3>
               <p>Entrena con nuestras máquinas más avanzadas.</p>
@@ -60,7 +61,7 @@
         </div>
         <div class="card crossfit">
           <div class="image-container">
-            <img src="img/crossfit1.jpg" alt="CrossFit">
+            <img src="img/gym_crossfit.jpg" alt="CrossFit">
             <div class="overlay">
               <h3>CrossFit</h3>
               <p>¡Lleva tu rendimiento al límite!</p>
@@ -69,7 +70,7 @@
         </div>
         <div class="card yoga">
           <div class="image-container">
-            <img src="" alt="Yoga">
+            <img src="/img/gym_yoga.jpg" alt="Yoga">
             <div class="overlay">
               <h3>Yoga</h3>
               <p>Relaja cuerpo y mente con nuestras sesiones.</p>
@@ -78,7 +79,7 @@
         </div>
         <div class="card spinning">
           <div class="image-container">
-            <img src="img/spinning1.jpg" alt="Spinning">
+            <img src="img/gym_spinning.jpg" alt="Spinning">
             <div class="overlay">
               <h3>Spinning</h3>
               <p>Disfruta de una experiencia motivadora con música.</p>
@@ -95,7 +96,7 @@
               <th>Día</th>
               <th>Clase</th>
               <th>Horario</th>
-              <th>Instructor</th>
+              <th>Entrenadores</th>
             </tr>
           </thead>
           <tbody>
@@ -103,19 +104,19 @@
               <td data-label="Día">Lunes</td>
               <td data-label="Clase">Yoga</td>
               <td data-label="Horario">10:00 - 11:00</td>
-              <td data-label="Instructor">María Gómez</td>
+              <td data-label="Instructor">Ana Ruiz</td>
             </tr>
             <tr>
               <td data-label="Día">Martes</td>
               <td data-label="Clase">CrossFit</td>
               <td data-label="Horario">18:00 - 19:00</td>
-              <td data-label="Instructor">Carlos Pérez</td>
+              <td data-label="Instructor">Lucas Pérez</td>
             </tr>
             <tr>
               <td data-label="Día">Miércoles</td>
               <td data-label="Clase">Spinning</td>
               <td data-label="Horario">12:00 - 13:00</td>
-              <td data-label="Instructor">Ana Ruiz</td>
+              <td data-label="Instructor">María Gómez</td>
             </tr>
             <tr>
               <td data-label="Día">Jueves</td>
@@ -127,19 +128,19 @@
               <td data-label="Día">Viernes</td>
               <td data-label="Clase">Yoga</td>
               <td data-label="Horario">16:00 - 17:00</td>
-              <td data-label="Instructor">María Gómez</td>
+              <td data-label="Instructor">Ana Ruiz</td>
             </tr>
             <tr>
               <td data-label="Día">Sábado</td>
               <td data-label="Clase">CrossFit</td>
               <td data-label="Horario">09:00 - 10:00</td>
-              <td data-label="Instructor">Carlos Pérez</td>
+              <td data-label="Instructor">Lucas Pérez</td>
             </tr>
             <tr>
               <td data-label="Día">Domingo</td>
               <td data-label="Clase">Spinning</td>
               <td data-label="Horario">11:00 - 12:00</td>
-              <td data-label="Instructor">Ana Ruiz</td>
+              <td data-label="Instructor">María Gómez</td>
             </tr>
           </tbody>
         </table>
@@ -147,9 +148,21 @@
     
       <footer class="footer">
         <div class="redes-sociales">
-            <a href="#"><img src="" alt="Facebook"></a>
-            <a href="#"><img src="" alt="Instagram"></a>
-            <a href="#"><img src="" alt="whatsapp"></a>
+               <!-- REDES SOCIALES -->
+<div class="social-media">
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
         </div>    
         <p>&copy; 2023 GYM - JIBOR. Todos los derechos reservados.</p>
       </footer>  

@@ -75,7 +75,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #f9f5f5;
   text-align: center;
 }
 
@@ -165,6 +165,7 @@ header {
 .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #222020;
 }
 
 .clases-container {
@@ -276,12 +277,13 @@ header {
   display: flex;
   width: 600%; /* 6 slides → 6 x 100% */
   animation: slideCarousel 50s infinite;
+  
 }
 
 .slide-auto {
   width: 100%;
   flex-shrink: 0;
-  background: white;
+  background: #ebe9e9;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -405,10 +407,7 @@ header {
   font-size: 1rem;
   margin: 0.5rem 0 0;
 }
-
-  
-  
-        
+         
 /* Estilo para la seccion de tabla responsiba de horarios */
        
 .horarios{
@@ -433,7 +432,7 @@ header {
 /* Encabezados de la tabla */
 .horarios thead {
   background-color: #333; /* Color oscuro para los encabezados */
-  color: #fff; /* Texto en blanco para contraste */
+  color: #0f0101; /* Texto en blanco para contraste */
   font-weight: bold; /* Resalta los encabezados */
 }
 
@@ -443,13 +442,13 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #11c64a; /* Color blanco para las filas impares */
+  background-color: #11c64a; /* Color verde para las filas impares */
 }
 
 /* Resaltado dinámico al pasar el cursor */
 tbody tr:hover {
   background-color: #ff6f61; /* Resaltado con un color llamativo */
-  color: #fff; /* Texto en blanco al hacer hover */
+  color: #09ec27; /* Texto en verde al hacer hover */
   cursor: pointer; /* Cambia el cursor para indicar interactividad */
 }
 
@@ -473,7 +472,7 @@ td:first-child {
     margin-bottom: 1rem;
     border: 1px solid #ddd;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #c2ec18;
   }
 
   .horarios td {
