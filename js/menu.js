@@ -1,10 +1,12 @@
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
+    // JavaScript for the menu toggle
 
-    menuToggle.addEventListener("click", function () {
-      menu.classList.toggle("active");
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('open');
+        });
     });
-  });
 </script>
